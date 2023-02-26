@@ -8,6 +8,8 @@ const AboutBrand: React.FC = () => {
                 Share information about your brand with your customers. Describe a
                 product, make announcements, or welcome customers to your store.
             </p>
+            <h1 className='featured__title'>Featured products</h1>
+
         </div>
     );
 };
