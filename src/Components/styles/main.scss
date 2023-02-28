@@ -5,6 +5,7 @@ body {
   color: #111;
   overflow-x: hidden;
   margin: 0;
+  font-family: "Roboto";
 }
 
 a {
@@ -40,6 +41,8 @@ ul {
 .nav-bar {
   margin-top: 20px;
   font-size: 18px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #cccccc;
 }
 .logo {
   display: flex;
@@ -122,8 +125,72 @@ ul {
 }
 
 .about__brand-description {
-  width: 45%;
-  margin: 0 auto;
+  max-width: 780px;
+  text-align: center;
+  line-height: 1.7;
+  margin: 0 15%;
   color: #111;
   font-size: 18px;
+}
+.featured__title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.main__product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product__item-title {
+  position: relative;
+  width: max-content;
+}
+.product__item-img {
+  width: 250px;
+  height: auto;
+}
+.product__item-wrapper {
+  margin: 20px;
+  &:hover {
+    cursor: pointer;
+    .product__item-title:after {
+      content: "";
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      height: 2px;
+      background-color: #111;
+      transition: width 0.2s;
+    }
+  }
+}
+//productPage
+.products__title {
+  margin-top: 35px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 42px;
+}
+//productPage
+@media (max-width: 1200px) {
+  .banner__container {
+    transform: translate(-50%, 50%);
+  }
+}
+@media (max-width: 800px) {
+  .banner__container {
+    width: 75%;
+    transform: translate(-50%, -10%);
+    p {
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .banner__container {
+    transform: translate(-50%, -50%);
+  }
 }
