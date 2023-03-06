@@ -32,7 +32,7 @@ const testProduct: productItem[] = [
 const Products: React.FC = () => {
   return (
     <div className="container">
-      <h1 className='products__title'>Products</h1>
+      <h1 className="title">Products</h1>
       <div className="main__product-wrapper">
         {testProduct.map((product) => (
           <MainProductItem

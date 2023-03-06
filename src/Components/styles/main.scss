@@ -7,6 +7,12 @@ body {
   margin: 0;
   font-family: "Roboto";
 }
+.title {
+  font-weight: 400;
+  font-size: 42px;
+  color: #111111;
+  letter-spacing: 2px;
+}
 
 a {
   text-decoration: none;
@@ -31,6 +37,7 @@ ul {
 .greeting {
   font-size: 12px;
   color: #111;
+  font-weight: 300;
   text-align: center;
 }
 .separator {
@@ -78,12 +85,6 @@ ul {
     }
   }
 }
-.background__main {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  filter: brightness(70%);
-}
 
 .banner__container {
   position: absolute;
@@ -95,10 +96,13 @@ ul {
     font-size: 36px;
     text-align: center;
     color: #fff;
+    font-weight: 400;
   }
   p {
     font-size: 18px;
-    color: #cccccc;
+    color: #e5e5e5;
+    line-height: 1.5;
+    text-align: center;
   }
   a {
     text-align: center;
@@ -108,6 +112,26 @@ ul {
     border: 1px solid #ffffff;
     display: block;
   }
+}
+.banner__content {
+  position: relative;
+  height: 700px;
+}
+.banner__container {
+  transform: translate(-50%, -50%);
+}
+.background__main {
+  padding: 0;
+  filter: brightness(70%);
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .banner__btn-wrapper {
   border: 1px solid transparent;
@@ -174,23 +198,35 @@ ul {
   font-weight: 400;
   font-size: 42px;
 }
+
 //productPage
-@media (max-width: 1200px) {
-  .banner__container {
-    transform: translate(-50%, 50%);
+.main__collage-img {
+  width: 100%;
+  height: auto;
+}
+
+.collage__wrapper {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+.other__collage-item {
+  width: 20%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .banner__content {
+    height: 500px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 450px) {
   .banner__container {
     width: 75%;
-    transform: translate(-50%, -10%);
-    p {
-      text-align: center;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
     }
-  }
-}
-@media (max-width: 800px) {
-  .banner__container {
-    transform: translate(-50%, -50%);
   }
 }
