@@ -2,7 +2,7 @@ export interface productItem {
   img: string;
   title: string;
   price: number;
-  sizes?: string | string[];
+  sizes?: string[];
   titles?: string[];
   descriptions?: string[];
   listName?: string;
