@@ -1,4 +1,5 @@
 @import "about";
+@import'productPage';
 
 body {
   font-family: "Roboto";
@@ -216,16 +217,7 @@ ul {
   height: auto;
 }
 
-.product__page-wrapper {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 
-.product__page-imgMain {
-  width: 100%;
-  height: auto;
-}
 
 @media (max-width: 900px) {
   .banner__content {
