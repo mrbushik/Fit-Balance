@@ -1,0 +1,155 @@
+.product__page-wrapper {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product__page-imgMain {
+  width: 100%;
+  height: auto;
+}
+
+.produdct__page-title {
+  font-weight: 400;
+}
+.product__page-price {
+  font-size: 18px;
+}
+
+.product__page-sizes {
+  ul {
+    display: flex;
+    padding-left: 0;
+  }
+  li {
+    padding: 10px 20px;
+    border: 1px solid #111;
+    margin-left: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.product__page-quantity {
+  border: 1px solid #111;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.product__quantity-btn {
+  padding: 10px 25px;
+  font-size: 32px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.product__quantity-value {
+  width: 30px;
+  display: block;
+  text-align: center;
+  font-size: 24px;
+}
+
+.product__btn-card {
+  border: 1px solid #111;
+  padding: 15px;
+  width: 50%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.product__size-active {
+  background: #111111;
+  color: #fff;
+}
+
+.product__btn-now {
+  cursor: pointer;
+  padding: 15px;
+  width: 50%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  margin-top: 10px;
+}
+
+.product__page-btns {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product__info-block {
+  margin-top: 40px;
+  width: 80%;
+  h5 {
+    color: #121212bf;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+  p {
+    color: #121212bf;
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.product__additional-wrapper {
+  h5 {
+    color: #121212bf;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+  ul {
+    padding-left: 0;
+    list-style: disc;
+  }
+  li {
+    margin-bottom: 15px;
+    color: #121212bf;
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.product__page-other-wrapper {
+  padding: 0 5%;
+  display: flex;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  h5 {
+    color: #121212bf;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+  p {
+    color: #121212bf;
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+.product__other-item {
+  margin-right: 5%;
+}
