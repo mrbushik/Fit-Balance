@@ -13,6 +13,7 @@ const Products: React.FC = () => {
             img={product.img}
             title={product.title}
             price={product.price}
+            key={product.title}
           />
         ))}
       </div>

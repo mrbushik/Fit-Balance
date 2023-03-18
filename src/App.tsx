@@ -5,12 +5,14 @@ import NavBar from "./Components/navigation/navBar";
 import AboutPage from "./Components/pages/aboutPage";
 import Products from "./Components/pages/products";
 import ProductItem from "./Components/pages/productItem";
+import Faq from "./Components/pages/FAQ";
 
 function App() {
   return (
     <>
       <NavBar />
       <Switch>
+        <Route path="/FAQ" component={Faq} />
         <Route path="/products/:Id" component={ProductItem} />
         <Route path="/products" component={Products} />
         <Route path="/about" component={AboutPage} />

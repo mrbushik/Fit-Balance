@@ -1,5 +1,6 @@
 @import "about";
-@import'productPage';
+@import "productPage";
+@import "faq";
 
 body {
   font-family: "Roboto";
@@ -213,11 +214,23 @@ ul {
 }
 
 .other__collage-item {
-  width: 20%;
+  width: 48%;
   height: auto;
+
+  img {
+    width: 68%;
+    height: auto;
+  }
+}
+.main__collage-item {
+  width: 48%;
+  margin-right: 2%;
 }
 
-
+.collage__price {
+  margin-top: 13px;
+  font-weight: 400;
+}
 
 @media (max-width: 900px) {
   .banner__content {

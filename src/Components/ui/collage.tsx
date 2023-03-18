@@ -14,12 +14,14 @@ const Collage: React.FC = () => {
         <div className="main__collage-item">
           <img src={collageImagesUrl[0]} className="main__collage-img" />
         </div>
-        <div className='other__collage-item'>
+        <div className="other__collage-item">
           <div>
             <img src={collageImagesUrl[1]} />
+            <p className="collage__price">79.99$</p>
           </div>
           <div>
             <img src={collageImagesUrl[2]} />
+            <p className="collage__price">25.99$</p>
           </div>
         </div>
       </div>
