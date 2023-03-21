@@ -1,0 +1,35 @@
+.refund__title-main {
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  color: #111111;
+}
+.refund__container {
+  width: 50%;
+  color: #8f8f8f;
+
+  a {
+    color: #111111;
+    padding-left: 2px;
+  }
+  span {
+    word-spacing: 2px;
+  }
+}
+.refund__title {
+  color: #111111;
+  font-weight: 900;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .refund__container {
+    width: 85%;
+  }
+}
+@media (max-width: 500px) {
+  .refund__title {
+    font-size: 24px;
+  }
+}

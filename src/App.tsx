@@ -9,12 +9,14 @@ import Faq from "./Components/pages/FAQ";
 import ContactUs from "./Components/pages/contactUs";
 import Footer from "./Components/navigation/footer";
 import Refund from "./Components/pages/refund";
+import Privacy from "./Components/pages/privacy";
 
 function App() {
   return (
     <>
       <NavBar />
       <Switch>
+        <Route path="/privacy" component={Privacy} />
         <Route path="/refund" component={Refund} />
         <Route path="/contact-us" component={ContactUs} />
         <Route path="/FAQ" component={Faq} />
