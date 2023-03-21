@@ -1,0 +1,136 @@
+.burger__menu {
+  display: none;
+}
+
+.nav-bar__mobile {
+  transform: translateX(-100vw);
+}
+
+.navbar-link {
+  display: none;
+}
+.navbar-link:first-child {
+  display: block;
+}
+.nav-btn {
+  display: none;
+}
+.adaptive-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  &:hover {
+    background: #d9d9d9;
+  }
+}
+
+.line {
+  margin-bottom: 2px;
+  margin-top: 2px;
+  width: 20px;
+  height: 2px;
+  background: #111111;
+}
+.nav-list__mobile {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.navbar-link__mobile {
+  margin-bottom: 20px;
+  a {
+    position: relative;
+    color: #111111;
+    font-size: 20px;
+  }
+}
+.nav__container {
+  position: relative;
+}
+.nav__cart_ico {
+  position: absolute;
+  right: 5%;
+}
+
+.nav__link-active:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: #111;
+  transition: width 0.2s;
+}
+
+.link__footer-container {
+  margin-left: 5%;
+  margin-right: 20%;
+}
+
+.nav-bar__mobile {
+  z-index: 3;
+  top: 169px;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  position: fixed;
+}
+.nav-link__mobile {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111111;
+  svg {
+    margin-left: 5%;
+  }
+}
+.nav-mobile__container {
+  position: fixed;
+  width: 100%;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+.nav-btn__mobile {
+  width: 90%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  svg {
+    margin-right: 1%;
+  }
+}
+.nav-list {
+  padding: 0;
+  li {
+    padding: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .burger__menu {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+  }
+  .nav__link {
+    display: none;
+  }
+  .nav__container {
+    justify-content: space-between;
+  }
+  .nav__cart_ico {
+    position: static;
+  }
+}

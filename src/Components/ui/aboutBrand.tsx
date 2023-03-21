@@ -34,6 +34,7 @@ const AboutBrand: React.FC = () => {
             img={item.img}
             title={item.title}
             price={item.price}
+            key={index}
           />
         ))}
       </div>

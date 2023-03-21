@@ -35,7 +35,7 @@ const ProductItem: React.FC = () => {
             <div>
               <img src={targetProduct.img} className="product__page-imgMain" />
             </div>
-            <div>
+            <div className='product__page-spetifications'>
               <h1 className="produdct__page-title">{targetProduct.title}</h1>
               <p className="product__page-price">${targetProduct.price} USD</p>
               {targetProduct.sizes && (

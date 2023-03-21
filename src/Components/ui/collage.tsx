@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Collage: React.FC = () => {
   const collageImagesUrl: string[] = [
@@ -15,14 +16,14 @@ const Collage: React.FC = () => {
           <img src={collageImagesUrl[0]} className="main__collage-img" />
         </div>
         <div className="other__collage-item">
-          <div>
+          <Link to="/products/FITNBALANCE%20Pistol%20Massager">
             <img src={collageImagesUrl[1]} />
             <p className="collage__price">79.99$</p>
-          </div>
-          <div>
+          </Link>
+          <Link to="/products/FITNBALANCE BackBridge Support">
             <img src={collageImagesUrl[2]} />
             <p className="collage__price">25.99$</p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

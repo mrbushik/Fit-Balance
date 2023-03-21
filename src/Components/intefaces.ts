@@ -8,3 +8,7 @@ export interface productItem {
   listName?: string;
   listInfo?: string[];
 }
+export interface pagesListInterface {
+  link: string;
+  name: string;
+}

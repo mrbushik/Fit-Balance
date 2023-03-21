@@ -6,12 +6,17 @@ import AboutPage from "./Components/pages/aboutPage";
 import Products from "./Components/pages/products";
 import ProductItem from "./Components/pages/productItem";
 import Faq from "./Components/pages/FAQ";
+import ContactUs from "./Components/pages/contactUs";
+import Footer from "./Components/navigation/footer";
+import Refund from "./Components/pages/refund";
 
 function App() {
   return (
     <>
       <NavBar />
       <Switch>
+        <Route path="/refund" component={Refund} />
+        <Route path="/contact-us" component={ContactUs} />
         <Route path="/FAQ" component={Faq} />
         <Route path="/products/:Id" component={ProductItem} />
         <Route path="/products" component={Products} />
@@ -19,6 +24,7 @@ function App() {
         <Route path="/" component={Main} />
         <Redirect to="/" />
       </Switch>
+      <Footer />
     </>
   );
 }
