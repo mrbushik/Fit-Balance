@@ -3,6 +3,7 @@
   font-weight: 400;
   font-size: 40px;
   color: #111111;
+  margin-top: 20px;
 }
 .refund__container {
   width: 50%;
@@ -11,9 +12,14 @@
   a {
     color: #111111;
     padding-left: 2px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-underline-mode: #111;
+    border-bottom: 1px solid #111;
   }
   span {
     word-spacing: 2px;
+    letter-spacing: 1px;
   }
 }
 .refund__title {
@@ -32,4 +38,9 @@
   .refund__title {
     font-size: 24px;
   }
+}
+
+.refund__mini-title {
+  font-size: 24px;
+  font-weight: 500;
 }
