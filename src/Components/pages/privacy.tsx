@@ -389,6 +389,34 @@ const Privacy: React.FC = () => {
           We use the following cookies to optimize your experience on our Site
           and to provide our services.
         </p>
+        <div>
+          <h4 className="refund__title">Changes</h4>
+          <p>
+            We may update this Privacy Policy from time to time in order to
+            reflect, for example, changes to our practices or for other
+            operational, legal, or regulatory reasons.
+          </p>
+        </div>
+        <div>
+          <h4 className="refund__title">Complaints</h4>
+          <p>
+            As noted above, if you would like to make a complaint, please
+            contact us by e-mail or by mail using the details provided under
+            “Contact” above.
+          </p>
+          <p>
+            If you are not satisfied with our response to your complaint, you
+            have the right to lodge your complaint with the relevant data
+            protection authority. You can contact your local data protection
+            authority, or our supervisory authority here:
+            <a
+              href="https://ico.org.uk/make-a-complaint/"
+              className="privacy-link"
+            >
+              https://ico.org.uk/make-a-complaint/
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

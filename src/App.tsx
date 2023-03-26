@@ -10,12 +10,14 @@ import ContactUs from "./Components/pages/contactUs";
 import Footer from "./Components/navigation/footer";
 import Refund from "./Components/pages/refund";
 import Privacy from "./Components/pages/privacy";
+import Cart from "./Components/pages/cart";
 
 function App() {
   return (
     <>
       <NavBar />
       <Switch>
+        <Route path="/cart" component={Cart} />
         <Route path="/privacy" component={Privacy} />
         <Route path="/refund" component={Refund} />
         <Route path="/contact-us" component={ContactUs} />

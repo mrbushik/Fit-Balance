@@ -7,6 +7,7 @@ const ProductItem: React.FC = () => {
 
   const PRODUCT_SIZE = 10;
   const location: any = useLocation();
+  let cartItem = {};
 
   const [productCount, setProductCount] = useState<number>(0);
   const [targetProduct, setTargetProduct] = useState<productItem | null>();
@@ -24,6 +25,17 @@ const ProductItem: React.FC = () => {
   const handleChangProductCount = (count: number) => {
     setProductCount((perv) => perv + count);
   };
+  console.log(localStorage.getItem("cart"));
+  const handleAddToCart = () => {
+    localStorage.setItem(
+      "cart",
+      JSON.stringify({
+        product: targetProduct,
+        size: productSize,
+        productCount: productCount,
+      })
+    );
+  };
 
   const handleSize = (size: string) => setProductSize(size);
 
@@ -35,8 +47,8 @@ const ProductItem: React.FC = () => {
             <div>
               <img src={targetProduct.img} className="product__page-imgMain" />
             </div>
-            <div className='product__page-spetifications'>
-              <h1 className="produdct__page-title">{targetProduct.title}</h1>
+            <div className="product__page-specification">
+              <h1 className="product__page-title">{targetProduct.title}</h1>
               <p className="product__page-price">${targetProduct.price} USD</p>
               {targetProduct.sizes && (
                 <div className="product__page-sizes">
@@ -73,7 +85,9 @@ const ProductItem: React.FC = () => {
                 </button>
               </div>
               <div className="product__page-btns">
-                <div className="product__btn-card">Add to cart</div>
+                <div className="product__btn-card" onClick={handleAddToCart}>
+                  Add to cart
+                </div>
                 <div className="product__btn-now">Buy it now</div>
               </div>
               <div>

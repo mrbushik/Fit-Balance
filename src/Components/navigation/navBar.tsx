@@ -8,7 +8,7 @@ const pagesList: pagesListInterface[] = [
   { name: "HOME", link: "/" },
   { name: "ABOUT US", link: "/about" },
   { name: "CONTACT US", link: "/contact-us" },
-  { name: "FAQs", link: "/FAQ" },
+  { name: "PRODUCTS", link: "/products" },
 ];
 
 const NavBar: React.FC = () => {
@@ -34,6 +34,7 @@ const NavBar: React.FC = () => {
     }
     element.style.transform = `translateX(${counter}vw)`;
   };
+
   const handleBtnClick = () => setActiveBtn((perv) => !perv);
 
   return (

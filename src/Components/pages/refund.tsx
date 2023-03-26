@@ -40,7 +40,7 @@ const Refund: React.FC = () => {
           the receipt or proof of purchase.
         </span>
       </div>
-      <div className="fefund-text__wrapper">
+      <div className="refund-text__wrapper">
         <h4 className="refund__title">Refunds</h4>
         <span>
           We will notify you once we’ve received and inspected your return, and
