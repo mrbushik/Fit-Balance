@@ -53,3 +53,19 @@ footer {
     color: #8f8f8f;
   }
 }
+
+@media (max-width: 952px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .link__footer-container {
+    margin: 5px 0 !important;
+  }
+  .footer__mission {
+    margin: 5px 0 20px !important;
+    p {
+      width: 100%;
+      padding: 0 5% 0 0;
+    }
+  }
+}

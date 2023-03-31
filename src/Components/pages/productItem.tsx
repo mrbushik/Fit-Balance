@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { ourProducts } from "../products";
-import { productItem } from "../intefaces";
+import { nanoid } from "nanoid";
+import { cartItem, productItem } from "../intefaces";
 import { useDispatch } from "react-redux";
 import { addProductInCart } from "../redux/actions/cart";
 const ProductItem: React.FC = () => {
   //TO DO solve problem with o lot of re renders in this page
   const dispatch: any = useDispatch();
-  const PRODUCT_SIZE = 10;
   const location: any = useLocation();
-  let cartItem = {};
+  const PRODUCT_SIZE = 10;
 
   const [productCount, setProductCount] = useState<number>(0);
   const [targetProduct, setTargetProduct] = useState<productItem | null>();
@@ -29,13 +29,14 @@ const ProductItem: React.FC = () => {
   };
   console.log(localStorage.getItem("cart"));
   const handleAddToCart = () => {
-    const product = {
+    const product: cartItem[] | cartItem = {
+      id: nanoid(6),
       title: targetProduct?.title,
-      description: targetProduct?.descriptions,
       img: targetProduct?.img,
       price: targetProduct ? targetProduct.price * productCount : 0,
       count: productCount,
       size: productSize,
+      unitPrice: targetProduct?.price,
     };
     dispatch(addProductInCart(product));
   };

@@ -12,3 +12,13 @@ export interface pagesListInterface {
   link: string;
   name: string;
 }
+
+export interface cartItem {
+  id: string;
+  title?: string;
+  img?: string;
+  price: number;
+  count: number;
+  size: string;
+  unitPrice?: number;
+}
