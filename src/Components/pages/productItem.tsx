@@ -2,16 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { ourProducts } from "../products";
 import { productItem } from "../intefaces";
+import { useDispatch } from "react-redux";
+import { addProductInCart } from "../redux/actions/cart";
 const ProductItem: React.FC = () => {
   //TO DO solve problem with o lot of re renders in this page
-
+  const dispatch: any = useDispatch();
   const PRODUCT_SIZE = 10;
   const location: any = useLocation();
   let cartItem = {};
 
   const [productCount, setProductCount] = useState<number>(0);
   const [targetProduct, setTargetProduct] = useState<productItem | null>();
-  const [productSize, setProductSize] = useState<string>("s");
+  const [productSize, setProductSize] = useState<string>("");
 
   const actualityProductName: string = location.pathname.slice(PRODUCT_SIZE);
 
@@ -27,14 +29,15 @@ const ProductItem: React.FC = () => {
   };
   console.log(localStorage.getItem("cart"));
   const handleAddToCart = () => {
-    localStorage.setItem(
-      "cart",
-      JSON.stringify({
-        product: targetProduct,
-        size: productSize,
-        productCount: productCount,
-      })
-    );
+    const product = {
+      title: targetProduct?.title,
+      description: targetProduct?.descriptions,
+      img: targetProduct?.img,
+      price: targetProduct ? targetProduct.price * productCount : 0,
+      count: productCount,
+      size: productSize,
+    };
+    dispatch(addProductInCart(product));
   };
 
   const handleSize = (size: string) => setProductSize(size);

@@ -1,7 +1,6 @@
 import { combineReducers } from "redux";
-import { Cart } from "../../styles/icons";
-
-const rootReducer = combineReducers({ Cart });
+import cart from "./cart";
+const rootReducer = combineReducers({ cart });
 
 export default rootReducer;
 export type RootState = ReturnType<typeof rootReducer>;

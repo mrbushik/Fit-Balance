@@ -1,13 +1,13 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const Cart: React.FC = () => {
-  let test;
-  let cart = localStorage.getItem("cart");
-  if (cart) cart = JSON.parse(cart);
-  console.log(cart);
+  const cartItems = useSelector((state: any) => state.cart.cartItems);
+  const cartPrice = useSelector((state: any) => state.cart.cartPrice);
+
   return (
     <div>
-      <h1>Cart</h1>
+      <h1>{}</h1>
     </div>
   );
 };
