@@ -40,9 +40,9 @@ const Cart: React.FC = () => {
         </tbody>
       </table>
       <div>
-        <div className="">
+        <div className="cart__subtotal">
           <h4>Subtotal</h4>
-          <span>${Math.round(parseFloat(cartPrice) * 100) / 100}</span>
+          <span>${Math.round(parseFloat(cartPrice) * 100) / 100} USD</span>
         </div>
       </div>
     </div>

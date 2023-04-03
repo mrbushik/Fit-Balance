@@ -5,15 +5,18 @@ import { nanoid } from "nanoid";
 import { cartItem, productItem } from "../intefaces";
 import { useDispatch } from "react-redux";
 import { addProductInCart } from "../redux/actions/cart";
+import CartStatus from "../ui/cartStatus";
 const ProductItem: React.FC = () => {
   //TO DO solve problem with o lot of re renders in this page
   const dispatch: any = useDispatch();
   const location: any = useLocation();
   const PRODUCT_SIZE = 10;
 
-  const [productCount, setProductCount] = useState<number>(0);
+  const [productCount, setProductCount] = useState<number>(1);
   const [targetProduct, setTargetProduct] = useState<productItem | null>();
   const [productSize, setProductSize] = useState<string>("");
+  const [statusCart, setStatusCart] = useState<boolean>(false);
+  const [productError, setProductError] = useState(false);
 
   const actualityProductName: string = location.pathname.slice(PRODUCT_SIZE);
 
@@ -24,9 +27,20 @@ const ProductItem: React.FC = () => {
     setTargetProduct(foundProduct);
   }, []);
 
+  useEffect(() => {
+    if (statusCart) {
+      const timer = setTimeout(() => {
+        setStatusCart(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [statusCart]);
+
   const handleChangProductCount = (count: number) => {
+    if (productCount === 1 && count === -1) return;
     setProductCount((perv) => perv + count);
   };
+
   const handleAddToCart = () => {
     const product: cartItem[] | cartItem = {
       id: nanoid(6),
@@ -37,7 +51,21 @@ const ProductItem: React.FC = () => {
       size: productSize,
       unitPrice: targetProduct?.price,
     };
-    dispatch(addProductInCart(product));
+    handleCheck(product);
+  };
+
+  const handleCheck = (product: cartItem[] | cartItem) => {
+    if (
+      (targetProduct?.sizes?.length && productSize === "") ||
+      productCount === 0
+    ) {
+      setProductError(false);
+      dispatch(addProductInCart(product));
+    } else {
+      setProductError(true);
+    }
+
+    setStatusCart(true);
   };
 
   const handleSize = (size: string) => setProductSize(size);
@@ -88,6 +116,7 @@ const ProductItem: React.FC = () => {
                 </button>
               </div>
               <div className="product__page-btns">
+                {statusCart && <CartStatus error={productError} />}
                 <div className="product__btn-card" onClick={handleAddToCart}>
                   Add to cart
                 </div>
