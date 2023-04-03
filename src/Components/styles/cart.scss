@@ -2,3 +2,40 @@
   width: 100px;
   height: auto;
 }
+.cart__title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    color: #121212;
+    text-decoration: underline;
+  }
+  h1 {
+    font-weight: 400;
+  }
+}
+.cart__item-title {
+  display: flex;
+  align-items: center;
+  h5 {
+    margin-left: 3%;
+  }
+}
+.cart__table-item {
+  border-bottom: 1px solid #8f8f8f;
+  border-top: 1px solid #8f8f8f;
+}
+.cart__table {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  border-bottom: 1px solid #cccccc; /* Параметры рамки */
+}
+.cart__item-basket {
+  text-align: center;
+  svg {
+    cursor: pointer;
+    color: #b12f2f;
+    width: 25px;
+  }
+}

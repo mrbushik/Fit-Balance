@@ -31,9 +31,12 @@ footer {
   flex-wrap: wrap;
 }
 
-.link__footer-container {
+.nav__cart-link {
+  color: #111111;
+  svg:hover {
+    width: 27px;
+  }
 }
-
 .footer__mission {
   p {
     width: 60%;

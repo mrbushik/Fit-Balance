@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { cartItem } from "../intefaces";
 import { Link } from "react-router-dom";
 
@@ -10,19 +10,20 @@ const Cart: React.FC = () => {
   const cartPrice = useSelector((state: any) => state.cart.cartPrice);
 
   return (
-    <div>
-      <div>
+    <div className="container">
+      <div className="cart__title-wrapper">
         <h1 className="cart__title">Your cart</h1>
         <Link className="cart__shopping-link" to="/products">
           Continue shopping
         </Link>
       </div>
-      <table>
+      <table className="cart__table">
         <tbody>
           <tr>
             <th>Product</th>
             <th>Quantity</th>
             <th>Total</th>
+            <th>Delete</th>
           </tr>
           {cartItems?.map((cartItem: cartItem) => (
             <CartItem
@@ -39,9 +40,9 @@ const Cart: React.FC = () => {
         </tbody>
       </table>
       <div>
-        <div>
+        <div className="">
           <h4>Subtotal</h4>
-          <span>${cartPrice}</span>
+          <span>${Math.round(parseFloat(cartPrice) * 100) / 100}</span>
         </div>
       </div>
     </div>

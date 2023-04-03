@@ -104,7 +104,9 @@ const NavBar: React.FC = () => {
             </Link>
           ))}
           <div className="nav__cart_ico">
-            <Cart />
+            <Link className="nav__cart-link" to="/cart">
+              <Cart />
+            </Link>
           </div>
         </div>
       </nav>

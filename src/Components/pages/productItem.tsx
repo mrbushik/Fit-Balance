@@ -27,7 +27,6 @@ const ProductItem: React.FC = () => {
   const handleChangProductCount = (count: number) => {
     setProductCount((perv) => perv + count);
   };
-  console.log(localStorage.getItem("cart"));
   const handleAddToCart = () => {
     const product: cartItem[] | cartItem = {
       id: nanoid(6),
